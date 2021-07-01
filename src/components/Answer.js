@@ -7,7 +7,6 @@ const Answer = ({
   correctAnswer,
   selectedAnswer,
 }) => {
-  const letters = ['A', 'B', 'C', 'D'];
   const isAnswerCorrect = selectedAnswer && answerText === correctAnswer;
   const isAnswerWrong =
     selectedAnswer === answerText && selectedAnswer !== correctAnswer;
@@ -23,7 +22,6 @@ const Answer = ({
       className={`answer ${correctAnswerClass} ${wrongAnswerClass} ${disabledClass}`}
       onClick={() => onSelectAnswer(answerText)}
     >
-      <div className="answer-letter">{letters[index]}</div>
       <div className="answer-text">{elo}</div>
     </div>
   );
