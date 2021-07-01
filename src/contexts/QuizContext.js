@@ -33,7 +33,9 @@ const reducer = (state, action) => {
     }
     case 'ANSWER_CLICK': {
       const correctAnswers =
-        action.payload === state.questions[state.curQuestionNum].correct_answer
+        action.payload ===
+          state.questions[state.curQuestionNum].correct_answer &&
+        state.selectedAnswer === ''
           ? state.correctAnswers + 1
           : state.correctAnswers;
       return {

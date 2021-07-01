@@ -48,6 +48,10 @@ export const Card = styled.div`
     background: linear-gradient(#81062e, #e30049);
   }
 
+  .disabled-answer {
+    pointer-events: none;
+  }
+
   .next-btn {
     display: inline-block;
     cursor: pointer;
